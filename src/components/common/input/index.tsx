@@ -1,14 +1,13 @@
-import { TextField, Box, styled, TextFieldProps, withStyles, Theme, useTheme ,} from "@mui/material";
-import { inputStyles } from "./style";
+import { TextField, Box, styled, TextFieldProps, withStyles, Theme, useTheme , StyledComponentProps, BoxProps} from "@mui/material";
+import { InputWrapper } from "./style";
 import clsx from "clsx"
 
 
 
-const CustomInput = styled(TextField)(({theme})=>({
-    display:"flex",
+const CustomInput = styled(TextField)((props)=>({
+    ...props
 }))
 
-const CustomContainer = styled(Box)(({theme})=>inputStyles(theme))
 
 
 interface InputProps{
@@ -18,12 +17,12 @@ interface InputProps{
 
 
 const Input: React.FC<InputProps & TextFieldProps> = ({label,containerClassName,className, ...props}) => {
-
+   const theme=useTheme()
     return(
-        <CustomContainer className={containerClassName}>
+        <InputWrapper className={containerClassName} theme={theme}>
             <label>{label}</label>
             <CustomInput {...props} className="input"  fullWidth/>
-        </CustomContainer>
+        </InputWrapper>
     )
 }
 
