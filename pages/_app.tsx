@@ -5,11 +5,11 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import theme from '../src/utils/theme';
-import createEmotionCache from '../src/utils/theme/createEmotionCache';
+import theme from '../utils/theme';
+import createEmotionCache from '../utils/theme/createEmotionCache';
 //Redux
 import { Provider } from 'react-redux';
-import { store } from '../src/redux/store';
+import { store } from '../redux/store';
 //Route Event
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css'

@@ -13,6 +13,9 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+    grey:{
+      "400":"#F8FAFC"
+    }
   },
 });
 
