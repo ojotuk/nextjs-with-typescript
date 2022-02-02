@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '../components/Common/link';
 import  Input  from '../components/Common/Input';
+import Button from '../components/Common/Button'
 
 
 const Home: NextPage = () => {
@@ -26,8 +27,10 @@ const Home: NextPage = () => {
         <Link href="/about" color="secondary" >
           Go to the about page
         </Link>
-
-        <Input label="Some Random Label"  />
+        <Input label="Email" placeholder='Email' type={"email"}  />
+        <Input label="Password" placeholder='Password' type={"password"}  />
+        <Button variant="contained" >Button</Button>
+        <Button variant="contained" disabled>Disbaled</Button>
       </Box>
     </Container>
   );
